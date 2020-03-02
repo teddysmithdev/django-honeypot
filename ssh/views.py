@@ -4,7 +4,6 @@ from django.shortcuts import render
 from .models import ConnectionItem
 from telnet.models import ConnectionItem as ConnectionTelnet
 
-# Create your views here.
 
 
 def home_page(request):

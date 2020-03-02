@@ -14,13 +14,13 @@ os.environ.setdefault('FORKED_BY_MULTIPROCESSING', '1')
 def main():
 	print('Starting honeypot!')
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-	s.bind(('0.0.0.0', 22))
+	s.bind(('0.0.0.0', 21))
 	s.listen(100)
 	while True:
 		(insock, address) = s.accept()
 		print('Connection from: %s:%d' % (address[0], address[1]))
 		try:
-			insock.send('SSH login: '.encode())
+			insock.send('Telnet login: '.encode())
 			data = insock.recv(1024)
 			log = ConnectionItem(address=address[0], port=address[1], data=data)
 			log.save()
@@ -29,5 +29,3 @@ def main():
 			print('aaaaaaa')
 		else:
 			print('bbbbbbb')
-
-

@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^g4gis4)&4!zb01j*0b&zs@!cjl!jaau4@-39(0rnci1ljj7q9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['www.djangohoney.com','djangohoney.com','68.183.115.154',]
+ALLOWED_HOSTS = ['www.djangohoney.com','djangohoney.com','68.183.115.154', '*']
 
 
 # Application definition

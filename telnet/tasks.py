@@ -14,7 +14,7 @@ os.environ.setdefault('FORKED_BY_MULTIPROCESSING', '1')
 def main():
 	print('Starting honeypot!')
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-	s.bind(('0.0.0.0', 21))
+	s.bind(('0.0.0.0', 23))
 	s.listen(100)
 	while True:
 		(insock, address) = s.accept()

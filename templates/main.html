@@ -59,27 +59,30 @@
       <div class="container">
 
         <div class="row">
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+          <div class="col-md-6 col-lg-4 d-flex flex-column">
             <div class="icon-box icon-box-pink">
               <div class="icon"><i class="bx bx-terminal"></i></div>
               <h4 class="title"><a href="">Total SSH Connections: {{ ssh_count }}</a></h4>
               <p class="description">SSH is one of the most popular attack vectors of botnets. It is not uncommon for servers to recieve thousands of malicious SSH attempts a day.</p>
+              <a href="/ssh" class="btn btn-primary mt-4">View Logs</a>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+          <div class="col-md-6 col-lg-4 d-flex flex-column">
             <div class="icon-box icon-box-cyan">
               <div class="icon"><i class="bx bx-hdd"></i></div>
               <h4 class="title"><a href="">Total Telnet Connections: {{ telnet_count }}</a></h4>
-              <p class="description">Telnet is a protocol often used by computer worms to spread. Most attack attempts are scripts searching for vulnerable IOT devices like printers, cameras, etc.</p>
+              <p class="description">Telnet is a protocol often used by computer worms to spread. Most attack attempts are searching for vulnerable IOT devices like printers, cameras, etc.</p>
+              <a href="/telnet" class="btn btn-primary mt-4">View Logs</a>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+          <div class="col-md-6 col-lg-4 d-flex flex-column">
             <div class="icon-box icon-box-green">
               <div class="icon"><i class="bx bx-tachometer"></i></div>
               <h4 class="title"><a href="">Total ICMP Requests: {{ icmp_count }}</a></h4>
               <p class="description">Before a connection from SSH or Telnet, a ping request is sometimes sent. Ping sweeps on a private network can also indicate malicious activity.</p>
+              <a href="/icmp" class="btn btn-primary mt-4">View Logs</a>
             </div>
           </div>
 

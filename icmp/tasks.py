@@ -14,4 +14,4 @@ def main():
     data, addr = s.recvfrom(1508)
     print("Packet from %r: %r" % (addr,data))
     log = ConnectionItem(address=addr, data=data)
-    log.save
+    log.save()

@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^g4gis4)&4!zb01j*0b&zs@!cjl!jaau4@-39(0rnci1ljj7q9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['68.183.115.154']
+ALLOWED_HOSTS = ['www.djangohoney.com','djangohoney.com','68.183.115.154', '*']
 
 
 # Application definition
@@ -138,7 +138,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static/'),
 )
 
 CELERY_BROKER_URL = 'redis://localhost:6379'

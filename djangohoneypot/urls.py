@@ -19,7 +19,9 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('ssh.urls'))
+    path('', include('ssh.urls')),
+    path('', include('telnet.urls')),
+    path('', include('icmp.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

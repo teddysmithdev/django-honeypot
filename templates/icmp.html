@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header id="header" class="fixed-top ">
+    <div class="container">
+
+      <div class="logo float-left">
+        <h1 class="text-light"><a href="/"><span>Django Honeypot</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/ssh" class='active'>SSH</a></li>
+          <li><a href="/telnet">Telnet</a></li>
+          <li><a href="/icmp">ICMP</a></li>
+          <li><a href="/admin">Login</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+  <main id="main">
+  <section class="breadcrumbs">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>Connection Logs</h2>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Connection Logs</li>
+        </ol>
+      </div>
+    </div>
+  </section><!-- End Our Services Section -->
+
+  <section class="services">
+    <div class="container">
+        <div class="list-group">
+            {% for icmp in icmp_logs %}
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">IP Address: {{ icmp.address }} Port: {{ icmp.port }}</h5>
+                <small>3 days ago</small>
+              </div>
+              <p class="mb-1">Data: {{ icmp.data }}</small>
+            </a>
+            {% endfor %}
+          </div>
+
+    </div>
+  </section><!-- End Services Section -->
+
+  </main>
+
+{% endblock content %}

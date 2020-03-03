@@ -10,7 +10,7 @@ os.environ.setdefault('FORKED_BY_MULTIPROCESSING', '1')
 
 
 
-@task(name="runtelnet")
+@task(name="runssh")
 def main():
 	print('Starting honeypot!')
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

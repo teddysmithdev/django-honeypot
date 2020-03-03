@@ -1,6 +1,8 @@
 # django-honeypot
 Low-Interaction honeypot built in Django for SSH, Telnet, and ICMP. Honeypots are 3 seperate scripts that run in the background of Django using Celery + Redis.
 
+Demo: http://www.djangohoney.com
+
 ## Motivation
 I saw another honeypot [built in NodeJS](https://github.com/Shmakov/Honeypot) that I thought was fascinating, so I built my own version in Python.
 
